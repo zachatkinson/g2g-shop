@@ -4,6 +4,8 @@
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
+  --font-header: "Bebas Neue";
+
   /* palette */
   --black-fade-5: rgba(0, 0, 0, 0.05);
   --black-fade-40: rgba(0, 0, 0, 0.4);
@@ -80,7 +82,7 @@
   --input-text: var(--text-color);
   --input-text-disabled: var(--black-fade-40);
   --input-ui: var(--text-color-secondary);
-  --input-ui-active: (--text-color);
+  --input-ui-active: var(--text-color);
 
   /* size */
   --size-input: var(--space-3xl);
@@ -111,6 +113,6 @@
 
 @media (min-width: 1280px) {
   :root {
-    --product-grid: repeat(4, 1fr);
+    --product-grid: repeat(3, 1fr);
   }
 }
