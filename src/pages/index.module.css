@@ -108,3 +108,36 @@ background: #00195E;
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+.chooseSection{
+}
+
+.chooseBenefits{
+  display: grid;
+  gap: 1rem;
+}
+
+.benefit{
+
+}
+
+.testimonialSection{
+
+}
+.testimony{
+
+}
+@media (min-width: 640px) {
+  .chooseBenefits{
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 1fr;
+
+  }
+}
+
+@media (min-width: 1024px) {
+  .chooseBenefits{
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}

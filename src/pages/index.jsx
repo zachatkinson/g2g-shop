@@ -1,5 +1,5 @@
 import * as React from "react"
-import {graphql} from "gatsby"
+import {graphql, Link} from "gatsby"
 import {Layout} from "../components/layout"
 import {ProductListing} from "../components/product-listing"
 import {
@@ -14,7 +14,12 @@ import {
     explain3,
     deliverySection,
     deliveryImage,
-    deliveryDesc
+    deliveryDesc,
+    chooseSection,
+    chooseBenefits,
+    benefit,
+    testimonialSection,
+    testimony,
 
 } from "./index.module.css"
 
@@ -34,7 +39,7 @@ function Hero(props) {
             <div className={innerHero}>
                 <h1 className={intro}>Good2Grow</h1>
                 <h2>Gardening Made Easy</h2>
-                <button className={shopButton}>Shop Now</button>
+                <Link to="#shop"><button className={shopButton}>Shop Now</button></Link>
 
             </div>
         </div>
@@ -60,11 +65,44 @@ function Explainer(props) {
     )
 }
 
+function ChooseUs(props){
+    return (
+        <div className={chooseSection}>
+            <h2>Why Choose Good2Grow?</h2>
+            <p>Each planter box is handcrafted with attention to detail, durable materials, and care.
+                Our unique planter style gives your space a warm yet modern aesthetic. Check out the other awesome benefits of our planters:</p>
+            <div className={chooseBenefits}>
+                <div className={benefit}>
+                    <h3>Quality Materials</h3>
+                    <ul>
+                        <li>Locally sourced pressure treated wood for durability and long lifespan.</li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div className={benefit}>
+                    <h3>Auto-Watering</h3>
+                    <ul>
+                        <li>8x2 Planter has 10 sprayer nozzles.</li>
+                        <li>4x2 Planter has 6 sprayer nozzles.</li>
+                    </ul>
+                </div>
+                <div className={benefit}>
+                    <h3>Easy Gardening</h3>
+                    <ul>
+                        <li>Product delivered fully assembled, just place and fill.</li>
+                        <li>Planter height of 22" for 8'&times;2'and 4'&times;2' reduces back strain. </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 function Delivery(props) {
     return (
         <div className={deliverySection}>
             <div className={deliveryImage}>
-                <img src="delivery.jpg" />
+                <img src="delivery.jpg" alt={"Delivery to your home or business"} />
             </div>
             <div className={deliveryDesc}>
                 <h3>Delivery to your home or business</h3>
@@ -81,14 +119,25 @@ function Delivery(props) {
     )
 }
 
+function Testimonials(props) {
+    return (
+        <div className={testimonialSection}>
+            <div className={testimony}>
+                Testify
+            </div>
+        </div>
+    )
+}
+
 export default function IndexPage({data}) {
     return (
         <Layout>
             <Hero/>
             <Explainer/>
-
-            <h2>Available in three sizes</h2>
+            <h2 id="shop" className="scrollOffset">Available in three sizes</h2>
             <ProductListing products={data?.shopifyCollection?.products}/>
+            <ChooseUs/>
+            <Testimonials/>
         </Layout>
     )
 }

@@ -1,6 +1,7 @@
 body {
   font-family: var(--font-body);
   color: var(--text-color);
+
 }
 
 .gatsby-image-wrapper {
@@ -34,4 +35,19 @@ h5{
 }
 h6{
   font-size: 1.50rem;
+}
+
+.scrollOffset{
+  scroll-margin-top: 122px;
+}
+@media(min-width: 640px){
+  .scrollOffset{
+    scroll-margin-top: 74px;
+  }
+}
+
+@media(min-width: 1024px){
+  .scrollOffset{
+    scroll-margin-top: 98px;
+  }
 }
