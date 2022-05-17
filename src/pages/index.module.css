@@ -127,6 +127,10 @@ background: #00195E;
 .testimony{
 
 }
+
+.aboutSection{
+
+}
 @media (min-width: 640px) {
   .chooseBenefits{
     grid-auto-flow: column;

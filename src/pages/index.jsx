@@ -20,6 +20,7 @@ import {
     benefit,
     testimonialSection,
     testimony,
+    aboutSection
 
 } from "./index.module.css"
 
@@ -129,6 +130,14 @@ function Testimonials(props) {
     )
 }
 
+function About(props){
+    return (
+        <div className={aboutSection}>
+            About
+        </div>
+    )
+}
+
 export default function IndexPage({data}) {
     return (
         <Layout>
@@ -138,6 +147,7 @@ export default function IndexPage({data}) {
             <ProductListing products={data?.shopifyCollection?.products}/>
             <ChooseUs/>
             <Testimonials/>
+            <About/>
         </Layout>
     )
 }

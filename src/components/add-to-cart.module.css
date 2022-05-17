@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   color: var(--text-color-inverted);
-  background-color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   align-self: flex-end;
   padding: var(--space-sm) var(--space-xl);
   border-radius: var(--radius-md);
@@ -15,4 +15,18 @@
 
 .addToCart:hover {
   box-shadow: var(--shadow);
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  transition: all 0.5s;
+}
+
+@property --colorPrimary {
+  syntax: '<color>';
+  initial-value: magenta;
+  inherits: false;
+}
+
+@property --colorSecondary {
+  syntax: '<color>';
+  initial-value: green;
+  inherits: false;
 }

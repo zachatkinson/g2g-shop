@@ -56,9 +56,10 @@
   /* role-based tokens */
 
   /* colors */
-  --primary: var(--green-80);
+  --primary: #154FEE;
   --background: var(--white);
   --border: var(--black-fade-5);
+  --secondary: #78FC0F;
 
   /* transitions */
   --transition: box-shadow 0.125s ease-in;
