@@ -135,10 +135,14 @@ display: grid;
   background: var(--primary);
   color: var(--text-color-inverted);
 }
+.productSection{
+
+}
 @media (min-width: 640px) {
   .chooseBenefits{
     grid-auto-flow: column;
     grid-auto-columns: 1fr 1fr;
+    margin-top: 1rem;
 
   }
 }

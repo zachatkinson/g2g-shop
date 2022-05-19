@@ -21,7 +21,8 @@ import {
     testimony,
     aboutSection,
     sectionInner,
-    customSection
+    customSection,
+    productSection
 
 } from "./index.module.css"
 
@@ -65,6 +66,16 @@ function Explainer(props) {
         </div>
     )
 }
+function FeaturedProducts(props){
+    return (
+        <div className={productSection}>
+            <div className={sectionInner}>
+                <h2 id="shop" className="scrollOffset">Available in three sizes</h2>
+                <ProductListing products={props.data?.shopifyCollection?.products}/>
+            </div>
+        </div>
+    )
+}
 function Customs(props){
     return(
         <div className={customSection}>
@@ -99,6 +110,7 @@ function ChooseUs(props){
         </div>
     )
 }
+
 
 function Delivery(props) {
     return (
@@ -144,10 +156,7 @@ export default function IndexPage({data}) {
         <Layout>
             <Hero/>
             <Explainer/>
-            <div className={sectionInner}>
-                <h2 id="shop" className="scrollOffset">Available in three sizes</h2>
-            <ProductListing products={data?.shopifyCollection?.products}/>
-            </div>
+            <FeaturedProducts data={data} />
             <Customs />
             <ChooseUs/>
             <Testimonials/>
