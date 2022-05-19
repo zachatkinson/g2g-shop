@@ -3,11 +3,8 @@ import LogoWhiteStencil from "../icons/logo-white-stencil";
 import {
   footerStyle,
   copyright,
-  links,
   blurb,
   logos,
-  footerNavList,
-  footerNavListItem,
 } from "./footer.module.css"
 
 export function Footer() {

@@ -5,20 +5,15 @@ import {ProductListing} from "../components/product-listing"
 import {
     container,
     intro,
-    callOut,
     shopButton,
     explainerSection,
     explain1,
     explain2,
     explain3,
-    deliverySection,
-    deliveryImage,
-    deliveryDesc,
     chooseSection,
     chooseBenefits,
     benefit,
     testimonialSection,
-    testimony,
     aboutSection,
     sectionInner,
     customSection,
@@ -36,7 +31,7 @@ export const query = graphql`
     }
 `
 
-function Hero(props) {
+function Hero() {
     return (
         <div className={container}>
             <div className={sectionInner}>
@@ -49,7 +44,7 @@ function Hero(props) {
     )
 }
 
-function Explainer(props) {
+function Explainer() {
     return (
         <div className={explainerSection}>
             <div className={explain1}>
@@ -76,7 +71,7 @@ function FeaturedProducts(props){
         </div>
     )
 }
-function Customs(props){
+function Customs(){
     return(
         <div className={customSection}>
             <div className={sectionInner}>
@@ -87,7 +82,7 @@ function Customs(props){
     )
 }
 
-function ChooseUs(props){
+function ChooseUs(){
     return (
         <div className={chooseSection}>
             <div className={sectionInner}>
@@ -112,29 +107,7 @@ function ChooseUs(props){
     )
 }
 
-
-function Delivery(props) {
-    return (
-        <div className={deliverySection}>
-            <div className={deliveryImage}>
-                <img src="delivery.jpg" alt={"Delivery to your home or business"} />
-            </div>
-            <div className={deliveryDesc}>
-                <h3>Delivery to your home or business</h3>
-                <p>Fill it, plant it, plug it and forget it. Good to grow no maintenance gardens.
-                    8/2 large gardens have 10 watering nozzles for optimum water supply for your plants.
-                    4/2 medium size gardens have 6 watering nozzles..
-                    16/36 contain watering stakes to distribute water throughout garden.
-                    20 inches of soil to provide maximum space for plants to root to supply plants with nutrients to get highest growth potential and topmost vegetables, herbs or flowers.
-                    Good to grow is the newest way to garden to obtain excellent growth with minimal work. </p>
-            </div>
-
-        </div>
-
-    )
-}
-
-function Testimonials(props) {
+function Testimonials() {
     return (
         <div className={testimonialSection}>
             <div className={sectionInner}>
@@ -144,7 +117,7 @@ function Testimonials(props) {
     )
 }
 
-function About(props){
+function About(){
     return (
         <div className={aboutSection}>
             <div className={sectionInner}>
