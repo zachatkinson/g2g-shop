@@ -86,7 +86,7 @@ function ChooseUs(){
     return (
         <div className={chooseSection}>
             <div className={sectionInner}>
-            <h2>Fill, Plant, Plug In & Forget</h2>
+            <h2>Fill It, Plant It, Power It & Forget It</h2>
             <p>People are loving Good2Grow modular gardens because they make gardening easy. These no-maintenance garden boxes are designed for high yields. Grow your favourite fruits, veggies, or herbs with this simple and effective system.</p>
             <div className={chooseBenefits}>
                 <div className={benefit}>
