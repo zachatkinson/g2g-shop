@@ -70,7 +70,7 @@ function FeaturedProducts(props){
     return (
         <div className={productSection}>
             <div className={sectionInner}>
-                <h2 id="shop" className="scrollOffset">Available in three sizes</h2>
+                <h2 id="shop" className="scrollOffset">Beautiful Planters for your Outdoor Space</h2>
                 <ProductListing products={props.data?.shopifyCollection?.products}/>
             </div>
         </div>
@@ -81,6 +81,7 @@ function Customs(props){
         <div className={customSection}>
             <div className={sectionInner}>
                 <h2>Custom Builds Available</h2>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
             </div>
         </div>
     )
@@ -136,8 +137,8 @@ function Delivery(props) {
 function Testimonials(props) {
     return (
         <div className={testimonialSection}>
-            <div className={testimony}>
-                Testify
+            <div className={sectionInner}>
+                <h2>Our Customers Love Our Gardens</h2>
             </div>
         </div>
     )
@@ -146,7 +147,10 @@ function Testimonials(props) {
 function About(props){
     return (
         <div className={aboutSection}>
-            About
+            <div className={sectionInner}>
+                <h2>Who Is Good2Grow?</h2>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
         </div>
     )
 }

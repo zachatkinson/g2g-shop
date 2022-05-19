@@ -100,15 +100,13 @@ display: grid;
 }
 
 .chooseSection{
-  padding: 0.5rem;
 }
 
 .sectionInner{
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0.5rem;
 }
 
 .chooseBenefits{
@@ -132,7 +130,10 @@ display: grid;
 }
 
 .customSection{
-  background: var(--primary);
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: no-repeat;
+  background-color: var(--primary);
   color: var(--text-color-inverted);
 }
 .productSection{
