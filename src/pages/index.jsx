@@ -51,16 +51,15 @@ function Explainer(props) {
     return (
         <div className={explainerSection}>
             <div className={explain1}>
-                <h3>Fill</h3>
-                <p className={callOut}>Add soil</p>
+                <h3>Shop</h3>
             </div>
             <div className={explain2}>
-                <h3>Plant</h3>
-                <p className={callOut}>Add seeds</p>
+                <h3>Grow</h3>
+
             </div>
             <div className={explain3}>
-                <h3>Plug</h3>
-                <p className={callOut}>Remove plug</p>
+                <h3>Enjoy</h3>
+
             </div>
         </div>
     )

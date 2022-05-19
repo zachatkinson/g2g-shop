@@ -67,6 +67,7 @@
 display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  background-image: url("/shop-grow-enjoy-bg.jpg");
 
 }
 
@@ -81,17 +82,17 @@ display: grid;
 }
 
 .explain1 {
-  background: #154FEE;
+
 
 }
 
 .explain2 {
-background: #1038A6;
+
 
   }
 
 .explain3{
-background: #00195E;
+
 
 }
 
