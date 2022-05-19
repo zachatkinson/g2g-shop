@@ -1,8 +1,43 @@
+/*@property --a {*/
+/*  syntax: '<angle>';*/
+/*  inherits: false;*/
+/*  initial-value: 10deg;*/
+/*}*/
+
+/*.addToCart {*/
+/*  --a: 10deg; !*  needed for firefox to have a valid output *!*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  color: var(--text-color-inverted);*/
+/*  background-image: linear-gradient(var(--a), var(--primary), var(--secondary));*/
+/*  align-self: flex-end;*/
+/*  padding: var(--space-sm) var(--space-xl);*/
+/*  border-radius: var(--radius-md);*/
+/*  font-weight: var(--bold);*/
+/*  align-items: center;*/
+/*  height: var(--size-input);*/
+/*  justify-content: center;*/
+/*  transition: var(--transition);*/
+/*}*/
+
+/*.addToCart:hover {*/
+/*  box-shadow: var(--shadow);*/
+/*  --a: 180deg;*/
+/*}*/
+
+@property --a {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 130deg;
+}
+
 .addToCart {
+  --a:130deg; /*  needed for firefox to have a valid output */
+  display:inline-block;
+  background:linear-gradient(var(--a),var(--primary), var(--secondary));
   display: flex;
   flex-direction: row;
   color: var(--text-color-inverted);
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
   align-self: flex-end;
   padding: var(--space-sm) var(--space-xl);
   border-radius: var(--radius-md);
@@ -10,23 +45,8 @@
   align-items: center;
   height: var(--size-input);
   justify-content: center;
-  transition: var(--transition);
+  transition: --a 0.33s ease-in;
 }
-
 .addToCart:hover {
-  box-shadow: var(--shadow);
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
-  transition: all 0.5s;
-}
-
-@property --colorPrimary {
-  syntax: '<color>';
-  initial-value: magenta;
-  inherits: false;
-}
-
-@property --colorSecondary {
-  syntax: '<color>';
-  initial-value: green;
-  inherits: false;
+  --a:270deg;
 }
