@@ -59,42 +59,31 @@
   font-size: 2rem;
   margin-top: var(--space-lg);
 }
-
-.innerHero{
-  max-width: 800px;
-}
 .explainerSection{
 display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   background-image: url("/shop-grow-enjoy-bg.jpg");
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  grid-gap: 2rem;
 
 }
 
 .explain1, .explain2, .explain3{
-  color: #fcfcfc;
+  color: #000000;
   text-align: center;
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border-radius: 50%;
+  background: #fcfcfc;
 }
 
-.explain1 {
-
-
-}
-
-.explain2 {
-
-
-  }
-
-.explain3{
-
-
-}
 
 .deliverySection{
   background: #222222;
@@ -111,6 +100,15 @@ display: grid;
 }
 
 .chooseSection{
+  padding: 0.5rem;
+}
+
+.sectionInner{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .chooseBenefits{
@@ -131,6 +129,11 @@ display: grid;
 
 .aboutSection{
 
+}
+
+.customSection{
+  background: var(--primary);
+  color: var(--text-color-inverted);
 }
 @media (min-width: 640px) {
   .chooseBenefits{

@@ -7,7 +7,6 @@ import {
     intro,
     callOut,
     shopButton,
-    innerHero,
     explainerSection,
     explain1,
     explain2,
@@ -20,7 +19,9 @@ import {
     benefit,
     testimonialSection,
     testimony,
-    aboutSection
+    aboutSection,
+    sectionInner,
+    customSection
 
 } from "./index.module.css"
 
@@ -37,9 +38,9 @@ export const query = graphql`
 function Hero(props) {
     return (
         <div className={container}>
-            <div className={innerHero}>
+            <div className={sectionInner}>
                 <h1 className={intro}>Good2Grow</h1>
-                <h2>Gardening Made Easy</h2>
+                <h2>Auto-watering, no-maintenance modular gardens</h2>
                 <Link to="#shop"><button className={shopButton}>Shop Now</button></Link>
 
             </div>
@@ -64,35 +65,36 @@ function Explainer(props) {
         </div>
     )
 }
+function Customs(props){
+    return(
+        <div className={customSection}>
+            <div className={sectionInner}>
+                <h2>Custom Builds Available</h2>
+            </div>
+        </div>
+    )
+}
 
 function ChooseUs(props){
     return (
         <div className={chooseSection}>
-            <h2>Why Choose Good2Grow?</h2>
-            <p>Each planter box is handcrafted with attention to detail, durable materials, and care.
-                Our unique planter style gives your space a warm yet modern aesthetic. Check out the other awesome benefits of our planters:</p>
+            <div className={sectionInner}>
+            <h2>Fill, Plant, Plug In & Forget</h2>
+            <p>People are loving Good2Grow modular gardens because they make gardening easy. These no-maintenance garden boxes are designed for high yields. Grow your favourite fruits, veggies, or herbs with this simple and effective system.</p>
             <div className={chooseBenefits}>
                 <div className={benefit}>
-                    <h3>Quality Materials</h3>
-                    <ul>
-                        <li>Locally sourced pressure treated wood for durability and long lifespan.</li>
-                        <li></li>
-                    </ul>
+                    <h3>Gardening made easy</h3>
+                    <p>Locally owned and constructed, we deliver right to your home or business. Within minutes you can have your modular garden set up and operational.</p>
                 </div>
                 <div className={benefit}>
                     <h3>Auto-Watering</h3>
-                    <ul>
-                        <li>8x2 Planter has 10 sprayer nozzles.</li>
-                        <li>4x2 Planter has 6 sprayer nozzles.</li>
-                    </ul>
+                    <p>Our built-in automated timer system takes care of watering for you with easy pause activation during rainy days. Plus, the landscape lining prevents weed growth and holds in moisture while protecting wood. </p>
                 </div>
                 <div className={benefit}>
-                    <h3>Easy Gardening</h3>
-                    <ul>
-                        <li>Product delivered fully assembled, just place and fill.</li>
-                        <li>Planter height of 22" for 8'&times;2'and 4'&times;2' reduces back strain. </li>
-                    </ul>
+                    <h3>Optimized for Growth</h3>
+                    <p>Each Good2Grow modular garden box is engineered to hold the right amount of soil for plants to root and get the necessary nutrients to thrive, achieving optimal growth with minimal work.</p>
                 </div>
+            </div>
             </div>
         </div>
     )
@@ -142,8 +144,11 @@ export default function IndexPage({data}) {
         <Layout>
             <Hero/>
             <Explainer/>
-            <h2 id="shop" className="scrollOffset">Available in three sizes</h2>
+            <div className={sectionInner}>
+                <h2 id="shop" className="scrollOffset">Available in three sizes</h2>
             <ProductListing products={data?.shopifyCollection?.products}/>
+            </div>
+            <Customs />
             <ChooseUs/>
             <Testimonials/>
             <About/>
