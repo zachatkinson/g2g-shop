@@ -9,7 +9,7 @@ import { title } from "./index.module.css"
 export default function Products({ data: { products } }) {
   return (
     <Layout>
-      <Seo title="All Products" />
+      <Seo title="Good2Grow Products" />
       <h1 className={title}>Products</h1>
       <ProductListing products={products.nodes} />
       {products.pageInfo.hasNextPage && (
