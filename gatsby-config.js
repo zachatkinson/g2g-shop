@@ -4,14 +4,14 @@ require("dotenv").config({
 const path = require(`path`)
 module.exports = {
   siteMetadata: {
-    siteTitle: "gatsby-starter-shopify",
-    siteTitleDefault: "gatsby-starter-shopify by @GatsbyJS",
-    siteUrl: "https://shopify-demo.gatsbyjs.com",
+    siteTitle: "Good2Grow Gardens",
+    siteTitleDefault: "Good2Grow Gardens",
+    siteUrl: "https://good2growontario.com",
     hrefLang: "en",
     siteDescription:
-      "A Gatsby starter using the latest Shopify plugin showcasing a store with product overview, individual product pages, and a cart.",
+      "The storefront for Good2Grow modular planters.",
     siteImage: "/default-og-image.jpg",
-    twitter: "@gatsbyjs",
+    twitter: "@good2growgardens",
   },
   flags: {
     FAST_DEV: true,
