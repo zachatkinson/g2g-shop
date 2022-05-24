@@ -21,6 +21,7 @@ export function Navigation({ className }) {
         className={navLink}
         to="/products/"
         activeClassName={activeLink}
+        title={"Shop Now"}
       >
         Shop Now
       </Link>
