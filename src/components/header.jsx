@@ -26,7 +26,7 @@ export function Header() {
   return (
     <div className={container}>
       <header className={header}>
-        <Link to="/" className={logoCss} name={"Good2Grow Homepage"}>
+        <Link to="/" className={logoCss} title={"Good2Grow Homepage"}>
           <Logo />
         </Link>
         <Navigation className={nav} />
