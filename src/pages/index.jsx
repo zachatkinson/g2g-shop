@@ -34,6 +34,9 @@ export const query = graphql`
 function Hero() {
     return (
         <div className={container}>
+            <video poster="/hero-bg.jpg">
+                    <source src="/hero-bg.mp4" type="video/mp4" />
+            </video>
             <div className={sectionInner}>
                 <h1 className={intro}>Good2Grow</h1>
                 <h2>Auto-watering, no-maintenance modular gardens</h2>
