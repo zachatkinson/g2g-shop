@@ -16,6 +16,7 @@ import {
     testimonialSection,
     aboutSection,
     sectionInner,
+    videoSectionInner,
     customSection,
     productSection
 
@@ -34,10 +35,10 @@ export const query = graphql`
 function Hero() {
     return (
         <div className={container}>
-            <video poster="/hero-bg.jpg">
+            <video autoPlay={"autoplay"} loop={"loop"} muted={"muted"} poster="/hero-bg.jpg">
                     <source src="/hero-bg.mp4" type="video/mp4" />
             </video>
-            <div className={sectionInner}>
+            <div className={videoSectionInner}>
                 <h1 className={intro}>Good2Grow</h1>
                 <h2>Auto-watering, no-maintenance modular gardens</h2>
                 <Link to="#shop"><button className={shopButton}>Shop Now</button></Link>
