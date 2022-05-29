@@ -37,7 +37,6 @@ video{
   font-size: var(--text-display);
   font-weight: var(--bold);
   line-height: var(--dense);
-  line-height: var(--dense);
   letter-spacing: var(--tight);
   color: #fcfcfc;
 }
@@ -94,6 +93,9 @@ display: grid;
   background: #fcfcfc;
 }
 
+.centerHeader{
+  text-align: center;
+}
 
 .deliverySection{
   background: #222222;

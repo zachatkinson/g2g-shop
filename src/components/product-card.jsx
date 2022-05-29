@@ -10,6 +10,7 @@ import {
   productDetailsStyle,
   productVendorStyle,
   productPrice,
+  productDimensionStyle,
 } from "./product-card.module.css"
 
 export function ProductCard({ product, eager }) {
@@ -52,6 +53,10 @@ export function ProductCard({ product, eager }) {
       to={slug}
       aria-label={`View ${title} product page`}
     >
+      <h3 as="h2" className={productHeadingStyle}>
+        {title}
+      </h3>
+      <h4 className={productDimensionStyle}>Dimensions</h4>
       {hasImage
         ? (
           <div className={productImageStyle} data-name="product-image-box">
@@ -66,11 +71,10 @@ export function ProductCard({ product, eager }) {
         )
       }
       <div className={productDetailsStyle}>
-        <div className={productVendorStyle}>{vendor}</div>
-        <h2 as="h2" className={productHeadingStyle}>
-          {title}
-        </h2>
-        <div className={productPrice}>{price}</div>
+
+        <div className={productVendorStyle}>X watering nozzles</div>
+
+        <h4 className={productPrice}>{price}</h4>
       </div>
     </Link>
   )

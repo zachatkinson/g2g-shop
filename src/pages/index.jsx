@@ -18,7 +18,8 @@ import {
     sectionInner,
     videoSectionInner,
     customSection,
-    productSection
+    productSection,
+    centerHeader,
 
 } from "./index.module.css"
 
@@ -69,7 +70,7 @@ function FeaturedProducts(props){
     return (
         <div className={productSection}>
             <div className={sectionInner}>
-                <h2 id="shop" className="scrollOffset">Beautiful Planters for your Outdoor Space</h2>
+                <h2 id="shop" className="scrollOffset">Modular Gardens</h2>
                 <ProductListing products={props.data?.shopifyCollection?.products}/>
             </div>
         </div>
