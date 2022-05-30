@@ -231,6 +231,7 @@ function SearchPage({
                   <ProductCard
                     eager={index === 0}
                     product={{
+                      id: node.id,
                       title: node.title,
                       priceRangeV2: node.priceRangeV2,
                       slug: `/products/${slugify(node.productType)}/${
@@ -242,6 +243,7 @@ function SearchPage({
                       vendor: node.vendor,
                     }}
                   />
+
                 </li>
               ))}
             </ul>
