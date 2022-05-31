@@ -93,8 +93,10 @@ display: grid;
   background: #fcfcfc;
 }
 
-.centerHeader{
+
+.explainerHeader{
   text-align: center;
+  font-size: 2rem;
 }
 
 .deliverySection{

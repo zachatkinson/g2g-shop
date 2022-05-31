@@ -51,3 +51,7 @@ h6{
     scroll-margin-top: 98px;
   }
 }
+
+.textCenter{
+  text-align: center;
+}

@@ -19,7 +19,7 @@ import {
     videoSectionInner,
     customSection,
     productSection,
-    centerHeader,
+    explainerHeader,
 
 } from "./index.module.css"
 
@@ -53,14 +53,14 @@ function Explainer() {
     return (
         <div className={explainerSection}>
             <div className={explain1}>
-                <h3>Shop</h3>
+                <h3 className={explainerHeader}>Shop</h3>
             </div>
             <div className={explain2}>
-                <h3>Grow</h3>
+                <h3 className={explainerHeader}>Grow</h3>
 
             </div>
             <div className={explain3}>
-                <h3>Enjoy</h3>
+                <h3 className={explainerHeader}>Enjoy</h3>
 
             </div>
         </div>
@@ -70,7 +70,7 @@ function FeaturedProducts(props){
     return (
         <div className={productSection}>
             <div className={sectionInner}>
-                <h2 id="shop" className="scrollOffset">Modular Gardens</h2>
+                <h2 id="shop" className="scrollOffset textCenter">Modular Gardens</h2>
                 <ProductListing products={props.data?.shopifyCollection?.products}/>
             </div>
         </div>
@@ -80,7 +80,7 @@ function Customs(){
     return(
         <div className={customSection}>
             <div className={sectionInner}>
-                <h2>Custom Builds Available</h2>
+                <h2 className={"textCenter"}>Custom Builds Available</h2>
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
             </div>
         </div>
@@ -91,7 +91,7 @@ function ChooseUs(){
     return (
         <div className={chooseSection}>
             <div className={sectionInner}>
-            <h2>Fill It, Plant It, Power It & Forget It</h2>
+            <h2 className={"textCenter"}>Fill It, Plant It, Power It & Forget It</h2>
             <p>People are loving Good2Grow modular gardens because they make gardening easy. These no-maintenance garden boxes are designed for high yields. Grow your favourite fruits, veggies, or herbs with this simple and effective system.</p>
             <div className={chooseBenefits}>
                 <div className={benefit}>
@@ -116,7 +116,7 @@ function Testimonials() {
     return (
         <div className={testimonialSection}>
             <div className={sectionInner}>
-                <h2>Our Customers Love Our Gardens</h2>
+                <h2 className={"textCenter"}>Our Customers Love Our Gardens</h2>
             </div>
         </div>
     )
@@ -126,7 +126,7 @@ function About(){
     return (
         <div className={aboutSection}>
             <div className={sectionInner}>
-                <h2>Who Is Good2Grow?</h2>
+                <h2 className={"textCenter"}>Who Is Good2Grow?</h2>
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
             </div>
         </div>
