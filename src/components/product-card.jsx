@@ -68,8 +68,8 @@ console.log(product.id)
       storefrontImageData = getShopifyImage({
         image: storefrontImage,
         layout: "fixed",
-        width: 1000,
-        height: 800,
+        width: defaultImageWidth,
+        height: defaultImageHeight,
       })
     } catch (e) {
       console.error(e)
