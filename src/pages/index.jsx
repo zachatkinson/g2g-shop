@@ -36,7 +36,7 @@ export const query = graphql`
 function Hero() {
     return (
         <div className={container}>
-            <video autoPlay={"autoplay"} loop={"loop"} muted={"muted"} poster="/hero-bg.jpg">
+            <video autoPlay={"autoplay"} loop={"loop"} muted={"muted"} poster="/hero-bg.jpg" playsInline={"playsinline"}>
                     <source src="/hero-bg.mp4" type="video/mp4" />
             </video>
             <div className={videoSectionInner}>
