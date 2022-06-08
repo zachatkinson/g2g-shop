@@ -23,9 +23,33 @@ export function Navigation({className}) {
                     to={`/products/${slugify(name)}`}
                     activeClassName={activeLink}
                 >
-                    {name}
+                    {"Shop Planters"}
                 </Link>
             ))}
+            <Link to={`/customs`}
+                  className={navLink}
+                  activeClassName={activeLink}
+                  >
+                Custom Builds
+            </Link>
+            <Link to={"#"}
+                  className={navLink}
+                  activeClassName={activeLink}
+            >
+                Gardening Tips
+            </Link>
+            <Link to={"#"}
+                  className={navLink}
+                  activeClassName={activeLink}
+                  >
+                FAQ
+            </Link>
+            <Link to={"#"}
+                  className={navLink}
+                  activeClassName={activeLink}
+            >
+                Contact
+            </Link>
         </nav>
     )
 }

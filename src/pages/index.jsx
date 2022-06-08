@@ -18,6 +18,7 @@ import {
     sectionInner,
     videoSectionInner,
     customSection,
+    customButton,
     productSection,
     explainerHeader,
 
@@ -81,7 +82,8 @@ function Customs(){
         <div className={customSection}>
             <div className={sectionInner}>
                 <h2 className={"textCenter"}>Custom Builds Available</h2>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                <p>Are you looking for a custom solution for your outdoor space? Good2Grow are available to consult with you and determine your specific project needs. Our team works with projects of all sizes, including restaraunts, large operations at retirement homes to custom builds to compliment your outdoor kitchen.</p>
+                <Link to="#shop"><button className={customButton}>Learn More</button></Link>
             </div>
         </div>
     )
@@ -141,8 +143,8 @@ export default function IndexPage({data}) {
             <FeaturedProducts data={data} />
             <Customs />
             <ChooseUs/>
-            <Testimonials/>
-            <About/>
+            {/*<Testimonials/>*/}
+            {/*<About/>*/}
         </Layout>
     )
 }

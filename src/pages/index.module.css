@@ -56,7 +56,7 @@ video{
 .deployButton {
   margin-top: var(--space-lg);
 }
-.shopButton{
+.shopButton, .customButton{
   border: 0.5rem solid #ffffff;
   color: #ffffff;
   padding-top: 0.5rem;
@@ -152,6 +152,12 @@ display: grid;
   background-repeat: no-repeat;
   background-color: var(--primary);
   color: var(--text-color-inverted);
+}
+.customSection .sectionInner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .productSection{
 
