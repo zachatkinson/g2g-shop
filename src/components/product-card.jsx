@@ -36,11 +36,11 @@ console.log(product.id)
   function ProductDimensions(product) {
     const dimensions =
       //large box
-      product.id === "e9a2d323-7797-55ef-8c31-a24d4a3c3033" || product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY3Mzc4Njc4OTg5Mzc=" ? "8' × 2' × 22\"" :
+      product.id === "f7294e54-2f82-5e9a-af5e-e6471e01fd72" || product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3NTMzMjg0OTI3MDk=" ? "8' × 2' × 22\"" :
       //small box
-      product.id === "aef9961e-8b05-59c6-baaf-4f8d576e98b0" ||  product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY3Mzc4NDUwNTk2NDE=" ? "4' × 2' × 22\"" :
+      product.id === "fbbb09bf-9ffe-5af1-bea7-043eb9bac9d6" ||  product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3NTMzMzk4MzA0Mzc=" ? "4' × 2' × 22\"" :
       //condo box
-      product.id === "ed24c26b-03b5-5f30-9d49-b93e112c9cd3" ||  product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY3MzcyNDAzNTg5Njk=" ? "16\" × 32\" × 18\"" :
+      product.id === "60bfb7e8-25b6-572b-8d0d-0b984b4bbfe2" ||  product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3NTMzMjUxODMxNDE=" ? "16\" × 32\" × 18\"" :
       //default
       null
     return (dimensions)
@@ -49,11 +49,11 @@ console.log(product.id)
   function WateringSystem (product) {
     const systemType =
     //large box
-    product.id === "e9a2d323-7797-55ef-8c31-a24d4a3c3033" || product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY3Mzc4Njc4OTg5Mzc=" ? "14 watering nozzles" :
+    product.id === "f7294e54-2f82-5e9a-af5e-e6471e01fd72" || product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3NTMzMjg0OTI3MDk=" ? "14 watering nozzles" :
     //small box
-    product.id === "aef9961e-8b05-59c6-baaf-4f8d576e98b0" ||  product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY3Mzc4NDUwNTk2NDE=" ? "12 watering nozzles" :
+    product.id === "fbbb09bf-9ffe-5af1-bea7-043eb9bac9d6" ||  product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3NTMzMzk4MzA0Mzc=" ? "12 watering nozzles" :
     //condo box
-    product.id === "ed24c26b-03b5-5f30-9d49-b93e112c9cd3" ||  product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY3MzcyNDAzNTg5Njk=" ? "watering stakes" :
+    product.id === "60bfb7e8-25b6-572b-8d0d-0b984b4bbfe2" ||  product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3NTMzMjUxODMxNDE=" ? "watering stakes" :
     //default
     null
     return(systemType)
