@@ -38,7 +38,7 @@ export function Navigation({className}) {
             >
                 Gardening Tips
             </Link>
-            <Link to={"#"}
+            <Link to={"/faq"}
                   className={navLink}
                   activeClassName={activeLink}
                   >
