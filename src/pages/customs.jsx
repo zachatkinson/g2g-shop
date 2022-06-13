@@ -37,6 +37,10 @@ export default function CustomPage({data}) {
                         onPlaceSelected={(place) => {
                             console.log(place)
                         }}
+                        options={{
+                            types: ["(regions)"],
+                            componentRestrictions: { country: "us | ca" },
+                        }}
                     />
 
                 </label>
