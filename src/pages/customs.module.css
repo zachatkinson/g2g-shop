@@ -23,11 +23,11 @@ label{
     text-align: left;
     width: 100%;
 }
-label input, textarea{
+label input, textarea, select{
 width: 100%;
     border: 2px solid #000000;
 }
-label input:focus, textarea:focus{
+label input:focus, textarea:focus, select:focus{
     border: 2px solid var(--primary);
 }
 

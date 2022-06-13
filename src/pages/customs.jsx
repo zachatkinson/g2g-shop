@@ -1,6 +1,7 @@
 import * as React from "react"
 import {Link} from "gatsby"
 import {Layout} from "../components/layout"
+import Autocomplete from "react-google-autocomplete";
 import {
     container,
     submitButton,
@@ -17,15 +18,30 @@ export default function CustomPage({data}) {
                     <input type="text" name="name" id="name" />
                 </label>
                 <label>
-                    Email
+                    Email<br />
                     <input type="email" name="email" id="email" />
                 </label>
                 <label>
-                    Subject
-                    <input type="text" name="subject" id="subject" />
+                    Property Type<br />
+                    <select name={"job_type"}>
+                        <option value={"residential"}>Residential</option>
+                        <option value={"commercial"}>Commercial / Office Space</option>
+                        <option value={"restaurant"}>Restaurant</option>
+                        <option value={"community"}>Community Gardens</option>
+                    </select>
                 </label>
                 <label>
-                    Message
+                    Property Address<br />
+                    <Autocomplete
+                        apiKey={"AIzaSyD8JH95SBl96v41rFTZsDKE9B3cLO6PVV8"}
+                        onPlaceSelected={(place) => {
+                            console.log(place)
+                        }}
+                    />
+
+                </label>
+                <label>
+                    Message<br />
                     <textarea name="message" id="message" rows="5" />
                 </label>
                 <button type="submit" className={submitButton}>Send</button>

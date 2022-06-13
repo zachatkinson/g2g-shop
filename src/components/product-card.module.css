@@ -37,4 +37,5 @@
 
 .productDimensionStyle{
   text-align: center;
+  color: var(--text-color);
 }
