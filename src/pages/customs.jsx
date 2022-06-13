@@ -39,7 +39,7 @@ export default function CustomPage({data}) {
                         }}
                         options={{
                             types: ["(regions)"],
-                            componentRestrictions: { country: " ca" },
+                            componentRestrictions: { country: "ca" },
                         }}
                     />
 
