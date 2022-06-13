@@ -33,7 +33,7 @@ export default function CustomPage({data}) {
                 <label>
                     Property Address<br />
                     <Autocomplete
-                        apiKey={"AIzaSyD8JH95SBl96v41rFTZsDKE9B3cLO6PVV8"}
+                        apiKey={process.env.GATSBY_PLACES_API}
                         onPlaceSelected={(place) => {
                             console.log(place)
                         }}
