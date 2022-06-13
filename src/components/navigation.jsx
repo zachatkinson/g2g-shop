@@ -44,7 +44,7 @@ export function Navigation({className}) {
                   >
                 FAQ
             </Link>
-            <Link to={"#"}
+            <Link to={"/contact"}
                   className={navLink}
                   activeClassName={activeLink}
             >
