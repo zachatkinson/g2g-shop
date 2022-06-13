@@ -24,15 +24,17 @@ export default function CustomPage({data}) {
                 <label>
                     Property Type<br />
                     <select name={"job_type"}>
-                        <option value={"residential"}>Residential</option>
+                        <option value={"residential"} selected={"selected"}>Residential</option>
                         <option value={"commercial"}>Commercial / Office Space</option>
                         <option value={"restaurant"}>Restaurant</option>
                         <option value={"community"}>Community Gardens</option>
+                        <option value={"other"}>Other</option>
                     </select>
                 </label>
                 <label>
                     Property Address<br />
                     <Autocomplete
+                        name={"property_address"}
                         apiKey={process.env.GATSBY_PLACES_API}
                         onPlaceSelected={(place) => {
                             console.log(place)
@@ -42,7 +44,6 @@ export default function CustomPage({data}) {
                             componentRestrictions: { country: "ca" },
                         }}
                     />
-
                 </label>
                 <label>
                     Message<br />
