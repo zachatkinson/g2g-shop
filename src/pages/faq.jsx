@@ -1,5 +1,6 @@
 import * as React from "react"
 import {Layout} from "../components/layout"
+import {Link} from "gatsby"
 import {
     Accordion,
     AccordionItem,
@@ -59,7 +60,7 @@ export default function FaqPage({data}) {
                         <AccordionItemButton className={styles.accordion__button}>What customizable elements can be added to your planters?</AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel className={styles.accordion__panel}>
-                        <p>If you're looking for something custom, our craftsmen are standing by and ready to help. Head over to our custom builds page now to get started on your project.</p>
+                        <p>If you're looking for something custom, our craftsmen are standing by and ready to help. <Link to={"/customs"}>Head over to our custom builds page now</Link> to get started on your project.</p>
                     </AccordionItemPanel>
                 </AccordionItem>
 

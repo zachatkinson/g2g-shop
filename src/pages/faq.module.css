@@ -5,7 +5,10 @@
     padding: 1rem 0.5rem;
 }
 
-
+a{
+    color: var(--primary);
+    text-decoration: underline;
+}
 /**
 * ----------------------------------------------
 * Demo styles
