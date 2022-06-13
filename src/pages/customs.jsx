@@ -38,7 +38,7 @@ export default function CustomPage({data}) {
                             console.log(place)
                         }}
                         options={{
-                            types: ["(regions)"],
+                            types: ["address"],
                             componentRestrictions: { country: "ca" },
                         }}
                     />
