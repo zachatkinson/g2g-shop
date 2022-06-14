@@ -41,7 +41,10 @@ export default function CustomPage({data}) {
                         }}
                         options={{
                             types: ["address"],
-                            componentRestrictions: { country: "ca" },
+                            componentRestrictions: {
+                                country: "ca | us",
+
+                            },
                         }}
                     />
                 </label>
