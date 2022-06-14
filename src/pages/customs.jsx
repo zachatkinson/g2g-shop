@@ -15,15 +15,15 @@ export default function CustomPage({data}) {
             <form method="post" action="https://getform.io/f/61ea152c-7c37-487e-bca7-c848aeaa2166">
                 <label>
                     Name<br />
-                    <input type="text" name="name" id="name" />
+                    <input type="text" name="name" id="name" required />
                 </label>
                 <label>
                     Email<br />
-                    <input type="email" name="email" id="email" />
+                    <input type="email" name="email" id="email" required />
                 </label>
                 <label>
                     Property Type<br />
-                    <select name={"job_type"}>
+                    <select name={"job_type"} required>
                         <option value={"residential"} selected={"selected"}>Residential</option>
                         <option value={"commercial"}>Commercial / Office Space</option>
                         <option value={"restaurant"}>Restaurant</option>
