@@ -7,13 +7,14 @@ import * as styles from "./customs.module.css";
 
 function Hero() {
     return (
-        <div className={styles.faqHero}>
+        <div className={styles.Hero}>
 
-            <h1>Custom Auto Watering Planters</h1>
+            <h1>Custom Planters</h1>
 
         </div>
     )
 }
+
 export default function CustomPage({data}) {
     return(
         <Layout>
