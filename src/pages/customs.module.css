@@ -9,8 +9,23 @@
     justify-content: center;
     position: relative;
     flex-direction: column;
+}
+
+.faqHero {
+    background-image: url("/customs-bg.jpg");
+    background-repeat: no-repeat;
+    color: #FCFCFC;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
 
 }
+
 form{
     display: flex;
     flex-direction: column;

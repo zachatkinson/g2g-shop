@@ -2,16 +2,23 @@ import * as React from "react"
 import {Link} from "gatsby"
 import {Layout} from "../components/layout"
 import Autocomplete from "react-google-autocomplete";
-import {
-    container,
-    submitButton,
-} from "./customs.module.css"
+import * as styles from "./customs.module.css";
 
+
+function Hero() {
+    return (
+        <div className={styles.faqHero}>
+
+            <h1>Custom Auto Watering Planters</h1>
+
+        </div>
+    )
+}
 export default function CustomPage({data}) {
     return(
         <Layout>
-            <div className={container}>
-            <h1>Custom Auto Watering Planters</h1>
+            <Hero />
+            <div className={styles.container}>
             <form method="post" action="https://getform.io/f/61ea152c-7c37-487e-bca7-c848aeaa2166">
                 <label>
                     Name<br />
@@ -51,7 +58,7 @@ export default function CustomPage({data}) {
                     Message<br />
                     <textarea name="message" id="message" rows="5" />
                 </label>
-                <button type="submit" className={submitButton}>Send</button>
+                <button type="submit" className={styles.submitButton}>Send</button>
             </form>
             </div>
         </Layout>
