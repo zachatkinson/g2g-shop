@@ -162,6 +162,7 @@ display: grid;
 .productSection{
 
 }
+
 @media (min-width: 640px) {
   .chooseBenefits{
     grid-auto-flow: column;
