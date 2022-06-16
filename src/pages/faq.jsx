@@ -10,6 +10,7 @@ import {
 } from "react-accessible-accordion";
 
 import * as styles from "./faq.module.css"
+import {Seo} from "../components/seo";
 
 
 function Hero() {
@@ -25,6 +26,7 @@ function Hero() {
 export default function FaqPage({data}) {
     return (
         <Layout>
+            <Seo title="Good2Grow Gardens FAQ" />
             <Hero />
             <div className={styles.sectionInner}>
                 <div className={styles.questions}>

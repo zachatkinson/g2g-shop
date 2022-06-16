@@ -3,6 +3,7 @@ import {Link} from "gatsby"
 import {Layout} from "../components/layout"
 import Autocomplete from "react-google-autocomplete";
 import * as styles from "./customs.module.css";
+import {Seo} from "../components/seo";
 
 
 function Hero() {
@@ -18,6 +19,7 @@ function Hero() {
 export default function CustomPage({data}) {
     return(
         <Layout>
+            <Seo title="Custom Built Auto-Watering Gardens by Good2Grow" />
             <Hero />
             <div className={styles.container}>
             <form method="post" action="https://getform.io/f/61ea152c-7c37-487e-bca7-c848aeaa2166">

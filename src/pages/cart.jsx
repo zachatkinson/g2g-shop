@@ -4,6 +4,7 @@ import { Layout } from "../components/layout"
 import { StoreContext } from "../context/store-context"
 import { LineItem } from "../components/line-item"
 import { formatPrice } from "../utils/format-price"
+import { Seo } from "../components/seo"
 import {
   table,
   wrap,
@@ -31,6 +32,7 @@ export default function CartPage() {
 
   return (
     <Layout>
+      <Seo title="Shopping Cart | Good2Grow Auto-Watering Gardens" />
       <div className={wrap}>
         {emptyCart ? (
           <div className={emptyStateContainer}>

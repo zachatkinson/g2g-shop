@@ -2,6 +2,7 @@ import * as React from "react"
 import {graphql, Link} from "gatsby"
 import {Layout} from "../components/layout"
 import {ProductListing} from "../components/product-listing"
+import { Seo } from "../components/seo"
 import {
     container,
     intro,
@@ -138,6 +139,7 @@ function About(){
 export default function IndexPage({data}) {
     return (
         <Layout>
+            <Seo title="Good2Grow Auto-Watering Gardens" />
             <Hero/>
             <Explainer/>
             <FeaturedProducts data={data} />

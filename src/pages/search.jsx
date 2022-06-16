@@ -39,6 +39,7 @@ import {
   filterWrap,
   emptyState,
 } from "./search-page.module.css"
+import {Seo} from "../components/seo";
 
 const DEFAULT_PRODUCTS_PER_PAGE = 24
 
@@ -152,6 +153,7 @@ function SearchPage({
 
   return (
     <Layout>
+      <Seo title="Search Good2Grow Products" />
       <h1 className={visuallyHidden}>Search Results</h1>
       <div className={main}>
         <div className={search} aria-hidden={modalOpen}>
