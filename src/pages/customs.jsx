@@ -1,5 +1,4 @@
 import * as React from "react"
-import {Link} from "gatsby"
 import {Layout} from "../components/layout"
 import Autocomplete from "react-google-autocomplete";
 import * as styles from "./customs.module.css";
@@ -41,7 +40,7 @@ export default function CustomPage({data}) {
                         <option value={"other"}>Other</option>
                     </select>
                 </label>
-                <label>
+                <label for={"property_address"}>
                     Property Address<br />
                     <Autocomplete
                         name={"property_address"}

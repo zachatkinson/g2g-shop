@@ -1,7 +1,5 @@
 import * as React from "react"
-import {Link} from "gatsby"
 import {Layout} from "../components/layout"
-import Autocomplete from "react-google-autocomplete";
 import * as styles from "./contact.module.css";
 import {Seo} from "../components/seo";
 
@@ -42,22 +40,6 @@ export default function ContactPage({data}) {
                                     <option value={"community"}>Community Gardens</option>
                                     <option value={"other"}>Other</option>
                                 </select>
-                            </label>
-                            <label>
-                                Property Address<br/>
-                                <Autocomplete
-                                    name={"property_address"}
-                                    apiKey={process.env.GATSBY_PLACES_API}
-                                    onPlaceSelected={(place) => {
-                                        console.log(place)
-                                    }}
-                                    options={{
-                                        types: ["address"],
-                                        componentRestrictions: {
-                                            country: ["ca", "us"]
-                                        },
-                                    }}
-                                />
                             </label>
                             <label>
                                 Message<br/>

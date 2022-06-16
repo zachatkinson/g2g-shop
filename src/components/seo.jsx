@@ -30,7 +30,6 @@ export function Seo({
   `)
 
   const {
-    siteTitle,
     siteTitleDefault,
     siteUrl,
     siteDescription,

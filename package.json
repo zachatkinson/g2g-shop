@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-shopify",
+  "name": "Good2Grow Gardens Shop",
   "version": "1.0.0",
   "private": true,
-  "description": "A Gatsby starter using the latest Shopify plugin showcasing a store with product overview, individual product pages, and a cart.",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "description": "A Gatsby shopify implementation with product overview, individual product pages, and a cart.",
+  "author": "Zach Atkinson <zach.atkinson85@gmail.com>",
   "license": "0BSD",
   "keywords": [
     "gatsby",
