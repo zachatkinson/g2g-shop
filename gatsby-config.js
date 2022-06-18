@@ -33,12 +33,31 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-gatsby-cloud",
-    // Add your Google Analytics ID to the .env file to enable
-    // Otherwise, this plugin can be removed
-    process.env.GOOGLE_ANALYTICS_ID && {
-      resolve: "gatsby-plugin-google-analytics",
+    {
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          process.env.GOOGLE_ANALYTICS_ID, // Google Analytics / GA
+        ],
+        // This object gets passed directly to the gtag config command
+        // This config will be shared across all trackingIds
+        gtagConfig: {
+          optimize_id: process.env.GOOGLE_OPTIMIZE_ID,
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Avoids sending pageview hits from custom paths
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          // Defaults to https://www.googletagmanager.com
+          origin: process.env.URL,
+        },
       },
     },
   ].filter(Boolean),
