@@ -39,6 +39,8 @@
 .contactInfo{
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 @media (min-width: 1024px) {
     .contactInfo{
