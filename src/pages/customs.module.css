@@ -1,14 +1,16 @@
-.container {
-    padding-left: var(--size-gutter-raw);
-    padding-right: var(--size-gutter-raw);
-    padding-top: var(--space-lg);
-    padding-bottom: var(--space-3xl);
+.sectionInner{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 0.5rem;
+}
+
+.intro{
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    flex-direction: column;
+    font-size: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
 }
 
 .Hero {

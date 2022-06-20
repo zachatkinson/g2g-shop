@@ -20,8 +20,10 @@ export default function CustomPage({data}) {
         <Layout>
             <Seo title="Custom Built Auto-Watering Gardens by Good2Grow" />
             <Hero />
-            <div className={styles.container}>
-            <form method="post" action="https://getform.io/f/61ea152c-7c37-487e-bca7-c848aeaa2166">
+            <div className={styles.sectionInner}>
+                <h2 className={"textCenter"}>Level Up Your Outdoor Space</h2>
+                <p className={styles.intro}>Are you looking for a different size or configuration from the standard Good2Grow planters? Let us know a little about your project with our form below and a good2Grow representative will reach out to discuss your project with you. </p>
+                <form method="post" action="https://getform.io/f/61ea152c-7c37-487e-bca7-c848aeaa2166">
                 <label>
                     Name<br />
                     <input type="text" name="name" id="name" required />
