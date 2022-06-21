@@ -4,7 +4,7 @@
     margin-right: auto;
     padding: 1rem 0.5rem;
 }
-h1{
+.postHead{
     border-style: solid;
     border-bottom-width: 0.5rem;
     border-image: linear-gradient(to right, var(--primary), var(--secondary)) 1;

@@ -12,7 +12,7 @@ export default function BlogPost({ data }) {
         <Layout>
             <GatsbyImage alt={"test"} image={getImage(post.mdx.frontmatter.featuredImage)}/>
             <div className={styles.sectionInner}>
-            <h1>{post.mdx.frontmatter.title}</h1>
+            <h1 className={styles.postHead}>{post.mdx.frontmatter.title}</h1>
             <small>{post.mdx.frontmatter.date}</small>
             <MDXRenderer>{post.mdx.body}</MDXRenderer>
             </div>
