@@ -30,13 +30,13 @@ export function Navigation({className}) {
                   className={navLink}
                   activeClassName={activeLink}
                   >
-                CUSTOMS
+                CUSTOM
             </Link>
-            <Link to={"#"}
+            <Link to={"/blog"}
                   className={navLink}
                   activeClassName={activeLink}
             >
-                GARDEN TIPS
+                BLOG
             </Link>
             <Link to={"/faq"}
                   className={navLink}

@@ -1,0 +1,30 @@
+.sectionInner{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 0.5rem;
+}
+.blogHero{
+    background-image: url("/faq-bg.jpg");
+    background-repeat: no-repeat;
+    color: #FCFCFC;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+
+}
+.postList{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-gap: 1rem;
+}
+@media (min-width: 1024px) {
+    .postList{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
