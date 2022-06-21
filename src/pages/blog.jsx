@@ -1,5 +1,5 @@
 import React from "react"
-import {graphql} from "gatsby"
+import {graphql, Link} from "gatsby"
 import {Layout} from "../components/layout";
 import {Seo} from "../components/seo";
 import * as styles from "./blog.module.css";
@@ -32,10 +32,12 @@ export default function Blog({data}) {
                     {posts.map(post => (
 
                         <article key={post.id}>
+                            <Link to={post.slug} className={styles.postLink}>
                             <GatsbyImage alt={"test"} image={getImage(post.frontmatter.featuredImage)}/>
                             <h2>{post.frontmatter.title}</h2>
                             <small>{post.frontmatter.author}, {post.frontmatter.date}</small>
                             <p>{post.excerpt}</p>
+                            </Link>
                         </article>
                     ))}
                 </div>
@@ -61,6 +63,7 @@ export const pageQuery = graphql`
                 }
                 excerpt
                 id
+                slug
             }
         }
     }

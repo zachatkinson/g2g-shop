@@ -18,6 +18,11 @@
     padding-bottom: var(--space-3xl);
 
 }
+.postLink{
+    color: inherit;
+    text-decoration: none;
+}
+
 .postList{
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
