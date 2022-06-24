@@ -30,6 +30,9 @@
     align-items: center;
     margin-top: 1rem;
 }
+.blogTitle{
+    line-height: 1rem;
+}
 .postList{
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));

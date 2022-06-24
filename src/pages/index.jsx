@@ -84,7 +84,7 @@ function Customs(){
             <div className={sectionInner}>
                 <h2 className={"textCenter"}>Custom Builds Available</h2>
                 <p>Are you looking for a custom solution for your outdoor space? Good2Grow are available to consult with you and determine your specific project needs. Our team works with projects of all sizes, including restaraunts, large operations at retirement homes to custom builds to compliment your outdoor kitchen.</p>
-                <Link to="/customs"><button className={customButton}>Learn More</button></Link>
+                <Link to="/customs"><button className={customButton}>Get Quote</button></Link>
             </div>
         </div>
     )

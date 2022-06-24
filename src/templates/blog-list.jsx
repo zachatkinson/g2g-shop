@@ -34,7 +34,7 @@ export default function Blog({data, pageContext}) {
                         <article key={post.id}>
                             <Link to={post.slug} className={styles.postLink}>
                                 <GatsbyImage alt={"test"} image={getImage(post.frontmatter.featuredImage)}/>
-                                <h2>{post.frontmatter.title}</h2>
+                                <h2 className={styles.blogTitle}>{post.frontmatter.title}</h2>
                                 <small>{post.frontmatter.author}, {post.frontmatter.date}</small>
                                 <p>{post.excerpt}</p>
                             </Link>
