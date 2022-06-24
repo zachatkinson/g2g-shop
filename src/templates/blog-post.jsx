@@ -8,7 +8,9 @@ import * as styles from "./blog-post.module.css";
 
 export default function BlogPost({ data }) {
     const post = data
+
     return (
+
         <Layout>
             <GatsbyImage alt={"test"} image={getImage(post.mdx.frontmatter.featuredImage)}/>
             <div className={styles.sectionInner}>
@@ -20,7 +22,7 @@ export default function BlogPost({ data }) {
     )
 }
 export const query = graphql`
-    query BlogQuery($slug: String!) {
+    query BlogPostQuery($slug: String!) {
         mdx(slug: { eq: $slug } ) {
             body
             frontmatter {

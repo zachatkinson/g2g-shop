@@ -2,7 +2,7 @@ import React from "react"
 import {graphql, Link} from "gatsby"
 import {Layout} from "../components/layout";
 import {Seo} from "../components/seo";
-import * as styles from "./blog.module.css";
+import * as styles from "./blog-list.module.css";
 import {GatsbyImage, getImage} from "gatsby-plugin-image"
 
 
@@ -16,9 +16,9 @@ function Hero() {
     )
 }
 
-export default function Blog({data}) {
+export default function Blog({data, pageContext}) {
     const {posts} = data.blog
-    console.log(posts)
+    console.log(pageContext.currentPage)
 
 
     return (
@@ -33,13 +33,20 @@ export default function Blog({data}) {
 
                         <article key={post.id}>
                             <Link to={post.slug} className={styles.postLink}>
-                            <GatsbyImage alt={"test"} image={getImage(post.frontmatter.featuredImage)}/>
-                            <h2>{post.frontmatter.title}</h2>
-                            <small>{post.frontmatter.author}, {post.frontmatter.date}</small>
-                            <p>{post.excerpt}</p>
+                                <GatsbyImage alt={"test"} image={getImage(post.frontmatter.featuredImage)}/>
+                                <h2>{post.frontmatter.title}</h2>
+                                <small>{post.frontmatter.author}, {post.frontmatter.date}</small>
+                                <p>{post.excerpt}</p>
                             </Link>
                         </article>
                     ))}
+                </div>
+                <div className={styles.postPagination}>
+                {Array.from({ length: pageContext.numPages }, (_, i) => (
+                    <Link className={styles.postListLink} key={`pagination-number${i + 1}`} to={`/${i === 0 ? "blog" : "blog/"+ (i + 1)}`}>
+                        {i + 1}
+                    </Link>
+                ))}
                 </div>
             </div>
         </Layout>
@@ -48,8 +55,13 @@ export default function Blog({data}) {
 }
 
 export const pageQuery = graphql`
-    query MyQuery {
-        blog: allMdx {
+    query BlogListQuery($skip: Int!, $limit: Int!){
+        blog: allMdx(
+            sort: { fields: [frontmatter___date], order: DESC }
+            limit: $limit
+            skip: $skip
+        )
+        {
             posts: nodes {
                 frontmatter {
                     date(fromNow: true)
