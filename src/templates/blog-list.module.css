@@ -31,7 +31,7 @@
     margin-top: 1rem;
 }
 .blogTitle{
-    line-height: 1rem;
+    line-height: 100r%;
 }
 .postList{
     display: grid;
