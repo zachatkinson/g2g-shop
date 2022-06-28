@@ -60,7 +60,6 @@ module.exports = {
         "gatsby-plugin-sharp",
         "gatsby-plugin-mdx",
         "gatsby-transformer-sharp",
-        "gatsby-plugin-sitemap",
         "gatsby-plugin-gatsby-cloud",
         "gatsby-plugin-gatsby-cloud",
 
