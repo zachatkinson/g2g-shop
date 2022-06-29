@@ -37,6 +37,8 @@ console.log(product.id)
     const dimensions =
       //large box
       product.id === "f7294e54-2f82-5e9a-af5e-e6471e01fd72" || product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3NTMzMjg0OTI3MDk=" ? "8' × 2' × 22\"" :
+      //medium box
+      product.id === "12bdf742-5959-583e-9439-8483c5e25746" ||  product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc4MTg5NzI5ODc1NTc=" ? "6' × 2' × 22\"" :
       //small box
       product.id === "fbbb09bf-9ffe-5af1-bea7-043eb9bac9d6" ||  product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3NTMzMzk4MzA0Mzc=" ? "4' × 2' × 22\"" :
       //condo box
@@ -50,6 +52,8 @@ console.log(product.id)
     const systemType =
     //large box
     product.id === "f7294e54-2f82-5e9a-af5e-e6471e01fd72" || product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3NTMzMjg0OTI3MDk=" ? "14 watering nozzles" :
+    //medium box
+    product.id === "12bdf742-5959-583e-9439-8483c5e25746" ||  product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc4MTg5NzI5ODc1NTc=" ? "12 watering nozzles" :
     //small box
     product.id === "fbbb09bf-9ffe-5af1-bea7-043eb9bac9d6" ||  product.id === "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzc3NTMzMzk4MzA0Mzc=" ? "12 watering nozzles" :
     //condo box
