@@ -6,7 +6,7 @@ module.exports = {
     siteMetadata: {
         siteTitle: "Good2Grow Gardens",
         siteTitleDefault: "Good2Grow Gardens",
-        siteUrl: "https://good2growontario.com",
+        siteUrl: process.env.URL,
         hrefLang: "en",
         siteDescription:
             "The storefront for Good2Grow modular planters.",
@@ -55,6 +55,56 @@ module.exports = {
                 path: `${__dirname}/src/images/`,
             },
         },
+        // {
+        //     resolve: "gatsby-plugin-sitemap",
+        //     options: {
+        //         query:`
+        //             {
+        //                 site {
+        //                     siteMetadata {
+        //                         siteUrl
+        //                     }
+        //                 }
+        //                 allMdx(sort: {fields: frontmatter___date, order: DESC}, filter: {slug: {glob: "!*wip*"}}) {
+        //                     nodes {
+        //                         frontmatter {
+        //                             date(formatString: "YYYY-MM-DD")
+        //                         }
+        //                         slug
+        //                     }
+        //                 }
+        //                 allSitePage {
+        //                     nodes {
+        //                         path
+        //                     }
+        //                 }
+        //             }
+        //         `,
+        //         resolveSiteUrl: ({ site: { siteMetadata: { siteUrl } } }) => siteUrl,
+        //         resolvePages: ({ allMdx: { nodes: mdxs }, allSitePage: {nodes: path}}) => {
+        //             const pages = path.map(pagePath => {
+        //                 return{
+        //                     path: pagePath
+        //                 }
+        //             })
+        //
+        //             const posts = mdxs.map(mdx => {
+        //                 return {
+        //                     path: `/blog/${mdx.slug}`,
+        //                     lastmod: mdx.frontmatter.date,
+        //                 }
+        //             })
+        //             return [...posts, ...pages]
+        //         },
+        //         serialize: ({ path, lastmod}) => {
+        //             return {
+        //                 url: path,
+        //                 lastmod: lastmod,
+        //             }
+        //         },
+        //     }
+        // },
+        "gatsby-plugin-sitemap",
         "gatsby-transformer-remark",
         "gatsby-plugin-image",
         "gatsby-plugin-sharp",
