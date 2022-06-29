@@ -104,7 +104,12 @@ module.exports = {
         //         },
         //     }
         // },
-        "gatsby-plugin-sitemap",
+        {
+            resolve: "gatsby-plugin-sitemap",
+            options: {
+                output: "/"
+            }
+        },
         "gatsby-transformer-remark",
         "gatsby-plugin-image",
         "gatsby-plugin-sharp",
