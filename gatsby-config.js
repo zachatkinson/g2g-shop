@@ -110,10 +110,23 @@ module.exports = {
                 output: "/"
             }
         },
+        {
+            resolve: `gatsby-plugin-mdx`,
+            options: {
+                gatsbyRemarkPlugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 1200,
+                        },
+                    },
+                ],
+            },
+        },
+        "gatsby-remark-images",
         "gatsby-transformer-remark",
         "gatsby-plugin-image",
         "gatsby-plugin-sharp",
-        "gatsby-plugin-mdx",
         "gatsby-transformer-sharp",
         "gatsby-plugin-gatsby-cloud",
         "gatsby-plugin-gatsby-cloud",
