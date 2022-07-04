@@ -16,7 +16,7 @@ function Hero() {
 
 export default function ContactPage({data}) {
     const [submitted, setSubmitted] = useState(false)
-    const siteKey = process.env.GOOGLE_RECAPTCHA_SITE_KEY
+    const siteKey = process.env.GATSBY_GOOGLE_RECAPTCHA_SITE_KEY
 
     const submit = (token) => {
         console.log("TOKEN: " + token)
