@@ -26,7 +26,7 @@ export function ProductCard({ product, eager }) {
 
 
 
-console.log(product.id)
+// console.log(product.id)
   const price = formatPrice(
     priceRangeV2.minVariantPrice.currencyCode,
     priceRangeV2.minVariantPrice.amount
@@ -81,8 +81,8 @@ console.log(product.id)
   }
 
   const hasImage = firstImage || Object.getOwnPropertyNames(storefrontImageData || {}).length
-  console.log(ProductDimensions(product))
-  console.log("PROD #: " + product.id)
+  // console.log(ProductDimensions(product))
+  // console.log("PROD #: " + product.id)
   return (
     <Link
       className={productCardStyle}

@@ -1,8 +1,8 @@
-import * as React from "react"
+import React, { useState }  from "react"
 import {Layout} from "../components/layout"
 import * as styles from "./contact.module.css";
 import {Seo} from "../components/seo";
-
+import ReCaptcha from "@pittica/gatsby-plugin-recaptcha"
 
 function Hero() {
     return (
@@ -15,6 +15,13 @@ function Hero() {
 }
 
 export default function ContactPage({data}) {
+    const [submitted, setSubmitted] = useState(false)
+
+    const submit = (token) => {
+        console.log("TOKEN: " + token)
+                    // document.getElementById('captchaResponse').value = token;
+    }
+
     return (
         <Layout>
             <Seo title="Contact Good2Grow Now" />
@@ -62,11 +69,21 @@ export default function ContactPage({data}) {
                                 Message<br/>
                                 <textarea name="message" id="message" rows="5"/>
                             </label>
-                            <button type="submit" className={styles.submitButton}>Send</button>
+                            <ReCaptcha
+                                action="homepage"
+                                siteKey={process.env.GOOGLE_RECAPTCHA_SITE_KEY}
+                                onVerify={(token) => submit(token)}
+                                submitted={submitted}
+                                badge={"bottomright"}
+                                size={"invisible"}
+                                id={"captchaResponse"}
+                            />
+                            <button type="submit" className={styles.submitButton} onClick={() => setSubmitted(true)}>Send</button>
                         </form>
                     </div>
                 </div>
             </div>
+
         </Layout>
     )
 }
