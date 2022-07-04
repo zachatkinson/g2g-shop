@@ -75,7 +75,6 @@ export default function ContactPage({data}) {
                                 onVerify={(token) => submit(token)}
                                 submitted={submitted}
                                 badge={"bottomright"}
-                                size={"invisible"}
                                 id={"captchaResponse"}
                             />
                             <button type="submit" className={styles.submitButton} onClick={() => setSubmitted(true)}>Send</button>
