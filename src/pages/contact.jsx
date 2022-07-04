@@ -16,6 +16,7 @@ function Hero() {
 
 export default function ContactPage({data}) {
     const [submitted, setSubmitted] = useState(false)
+    const siteKey = process.env.GOOGLE_RECAPTCHA_SITE_KEY
 
     const submit = (token) => {
         console.log("TOKEN: " + token)
@@ -71,7 +72,7 @@ export default function ContactPage({data}) {
                             </label>
                             <ReCaptcha
                                 action="homepage"
-                                siteKey={process.env.GOOGLE_RECAPTCHA_SITE_KEY}
+                                siteKey={siteKey}
                                 onVerify={(token) => submit(token)}
                                 submitted={submitted}
                                 badge={"bottomright"}
