@@ -4,6 +4,10 @@ body {
 
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 .gatsby-image-wrapper {
   margin: auto;
 }

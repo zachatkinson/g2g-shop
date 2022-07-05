@@ -1,8 +1,7 @@
 import React, { useState }  from "react"
 import {Layout} from "../components/layout"
-import * as styles from "./contact.module.css";
-import {Seo} from "../components/seo";
-import ReCaptcha from "@pittica/gatsby-plugin-recaptcha"
+import * as styles from "./contact.module.css"
+import {Seo} from "../components/seo"
 
 function Hero() {
     return (
@@ -14,14 +13,13 @@ function Hero() {
     )
 }
 
-export default function ContactPage({data}) {
-    const [submitted, setSubmitted] = useState(false)
-    const siteKey = process.env.GATSBY_GOOGLE_RECAPTCHA_SITE_KEY
-
-    const submit = (token) => {
-        console.log("TOKEN: " + token)
-                    // document.getElementById('captchaResponse').value = token;
-    }
+export default function ContactPage() {
+        window.grecaptcha.ready(function() {
+            window.grecaptcha.execute('6Lc1w8IgAAAAAO5FcQKRTDcnXNKs3eftKtu8Gis8', {action: 'homepage'})
+                .then(function(token) {
+                    document.getElementById('captchaResponse').value = token;
+                });
+        });
 
     return (
         <Layout>
@@ -70,15 +68,8 @@ export default function ContactPage({data}) {
                                 Message<br/>
                                 <textarea name="message" id="message" rows="5"/>
                             </label>
-                            <ReCaptcha
-                                action="homepage"
-                                siteKey={siteKey}
-                                onVerify={(token) => submit(token)}
-                                submitted={submitted}
-                                badge={"bottomright"}
-                                id={"captchaResponse"}
-                            />
-                            <button type="submit" className={styles.submitButton} onClick={() => setSubmitted(true)}>Send</button>
+                            <input type="hidden" id="captchaResponse" name="g-recaptcha-response" />
+                            <button type="submit" className={styles.submitButton}>Send</button>
                         </form>
                     </div>
                 </div>

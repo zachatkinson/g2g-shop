@@ -52,3 +52,12 @@
 .links a {
   padding: var(--space-md);
 }
+
+.recap{
+  font-size: var(--text-xs);
+  color: var(--text-color-secondary);
+}
+.recap a{
+  color: var(--white);
+  font-size: var(--text-xs);
+}
