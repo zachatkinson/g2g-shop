@@ -6,11 +6,14 @@ import "./src/styles/global.css"
 import "@fontsource/bebas-neue"
 import {Helmet} from "react-helmet";
 
+const scriptCall = "https://www.google.com/recaptcha/api.js?render=" + process.env.GATSBY_RECAPTCHA_SITE_KEY
+
 export const wrapRootElement = ({ element }) => (
+
 
     <StoreProvider>
         <Helmet>
-            <script src="https://www.google.com/recaptcha/api.js?render=6Lc1w8IgAAAAAO5FcQKRTDcnXNKs3eftKtu8Gis8"></script>
+            <script src={scriptCall}></script>
         </Helmet>
         {element}
     </StoreProvider>

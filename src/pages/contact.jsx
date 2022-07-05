@@ -15,7 +15,7 @@ function Hero() {
 
 export default function ContactPage() {
         window.grecaptcha.ready(function() {
-            window.grecaptcha.execute('6Lc1w8IgAAAAAO5FcQKRTDcnXNKs3eftKtu8Gis8', {action: 'homepage'})
+            window.grecaptcha.execute(process.env.GATSBY_RECAPTCHA_SITE_KEY, {action: 'homepage'})
                 .then(function(token) {
                     document.getElementById('captchaResponse').value = token;
                 });
