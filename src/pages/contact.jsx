@@ -14,12 +14,17 @@ function Hero() {
 }
 
 export default function ContactPage() {
+    // Check if window is defined (so if in the browser or in node.js).
+    const isBrowser = typeof window !== "undefined"
+    if(isBrowser){
         window.grecaptcha.ready(function() {
             window.grecaptcha.execute(process.env.GATSBY_RECAPTCHA_SITE_KEY, {action: 'homepage'})
                 .then(function(token) {
                     document.getElementById('captchaResponse').value = token;
                 });
         });
+    }
+
 
     return (
         <Layout>
