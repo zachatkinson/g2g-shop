@@ -31,9 +31,8 @@ export default function CustomPage({data}) {
     }
     return(
         <Layout>
-            <Helmet>
                 <script src={scriptCall} async defer></script>
-            </Helmet>
+
             <Seo title="Custom Built Auto-Watering Gardens by Good2Grow" />
             <Hero />
             <div className={styles.sectionInner}>
