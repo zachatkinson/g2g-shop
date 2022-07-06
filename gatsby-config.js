@@ -28,7 +28,7 @@ module.exports = {
                 // This object is used for configuration specific to this plugin
                 pluginConfig: {
                     // Puts tracking script in the head instead of the body
-                    head: true,
+                    head: false,
                 },
             },
         },
@@ -128,7 +128,6 @@ module.exports = {
         "gatsby-plugin-image",
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp",
-        "gatsby-plugin-gatsby-cloud",
         "gatsby-plugin-gatsby-cloud",
 
     ].filter(Boolean),
