@@ -11,7 +11,7 @@ export function Layout({children}) {
     return (
         <div>
             <Helmet>
-                <script src={scriptCall}></script>
+                <script src={scriptCall} async defer></script>
             </Helmet>
             <Seo/>
             <SkipNavLink/>
