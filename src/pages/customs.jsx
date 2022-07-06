@@ -16,6 +16,16 @@ function Hero() {
 }
 
 export default function CustomPage({data}) {
+    // Check if window is defined (so if in the browser or in node.js).
+    const isBrowser = typeof window !== "undefined"
+    if(isBrowser){
+        window.grecaptcha.ready(function() {
+            window.grecaptcha.execute(process.env.GATSBY_RECAPTCHA_SITE_KEY, {action: 'homepage'})
+                .then(function(token) {
+                    document.getElementById('captchaResponse').value = token;
+                });
+        });
+    }
     return(
         <Layout>
             <Seo title="Custom Built Auto-Watering Gardens by Good2Grow" />
@@ -62,6 +72,7 @@ export default function CustomPage({data}) {
                     Message<br />
                     <textarea name="message" id="message" rows="5" />
                 </label>
+                    <input type="hidden" id="captchaResponse" name="g-recaptcha-response" />
                 <button type="submit" className={styles.submitButton}>Send</button>
             </form>
             </div>
