@@ -1,9 +1,9 @@
 import * as React from "react"
 import {Layout} from "../components/layout"
-import Autocomplete from "react-google-autocomplete";
-import * as styles from "./customs.module.css";
-import {Seo} from "../components/seo";
-
+import Autocomplete from "react-google-autocomplete"
+import * as styles from "./customs.module.css"
+import {Seo} from "../components/seo"
+import {Helmet} from "react-helmet"
 
 function Hero() {
     return (
@@ -16,6 +16,9 @@ function Hero() {
 }
 
 export default function CustomPage({data}) {
+
+    const scriptCall = "https://www.google.com/recaptcha/api.js?render=" + process.env.GATSBY_RECAPTCHA_SITE_KEY
+
     // Check if window is defined (so if in the browser or in node.js).
     const isBrowser = typeof window !== "undefined"
     if(isBrowser){
@@ -28,6 +31,9 @@ export default function CustomPage({data}) {
     }
     return(
         <Layout>
+            <Helmet>
+                <script src={scriptCall} async defer></script>
+            </Helmet>
             <Seo title="Custom Built Auto-Watering Gardens by Good2Grow" />
             <Hero />
             <div className={styles.sectionInner}>
