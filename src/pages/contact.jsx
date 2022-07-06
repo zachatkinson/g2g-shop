@@ -60,12 +60,13 @@ export default function ContactPage() {
                                 <input type="email" name="email" id="email" required/>
                             </label>
                             <label>
-                                Property Type<br/>
-                                <select name={"job_type"} required>
-                                    <option value={"residential"} selected={"selected"}>Residential</option>
-                                    <option value={"commercial"}>Commercial / Office Space</option>
-                                    <option value={"restaurant"}>Restaurant</option>
-                                    <option value={"community"}>Community Gardens</option>
+                                Inquiry Type<br/>
+                                <select name={"subject"} required defaultValue={"feedback"}>
+                                    <option value={"shipping"}>Shipping</option>
+                                    <option value={"billing"}>Commercial / Office Space</option>
+                                    <option value={"product question"}>Product Question</option>
+                                    <option value={"feedback"}>Feedback</option>
+                                    <option value={"orders-cancellations"}>Orders / Cancellations</option>
                                     <option value={"other"}>Other</option>
                                 </select>
                             </label>
