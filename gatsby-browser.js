@@ -13,7 +13,7 @@ export const wrapRootElement = ({ element }) => (
 
     <StoreProvider>
         <Helmet>
-            <script src={scriptCall}></script>
+            <script src={scriptCall} defer></script>
         </Helmet>
         {element}
     </StoreProvider>
