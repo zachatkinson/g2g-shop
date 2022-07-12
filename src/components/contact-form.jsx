@@ -35,6 +35,7 @@ export default function Form() {
             axios({
                 method: 'post',
                 url: 'https://hcaptcha.com/siteverify',
+                headers: {'Access-Control-Allow-Origin': 'https://good2growontario.com'},
                 data: {
                     secret: process.env.GATSBY_HCAPTCHA_SECRET_KEY,
                     response: {token},
