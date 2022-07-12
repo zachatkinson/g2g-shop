@@ -15,7 +15,7 @@ export default function Form() {
         // execute function on it. you can use other functions as well
         // documented in the api:
         // https://docs.hcaptcha.com/configuration#jsapi
-        captchaRef.current.execute();
+        hcaptcha.execute();
     };
 
     const onExpire = () => {
@@ -35,10 +35,9 @@ export default function Form() {
             axios({
                 method: 'post',
                 url: 'https://hcaptcha.com/siteverify',
-                headers: {'X-Requested-With': 'XMLHttpRequest'},
                 data: {
                     secret: process.env.GATSBY_HCAPTCHA_SECRET_KEY,
-                    response: token,
+                    response: {token},
                 }
             }).then(function (response) {
                     console.log(response);
