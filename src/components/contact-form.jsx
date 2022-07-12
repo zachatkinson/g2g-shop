@@ -74,7 +74,7 @@ export default function Form() {
             <HCaptcha
                 // This is testing sitekey, will autopass
                 // Make sure to replace
-                sitekey="10000000-ffff-ffff-ffff-000000000001"
+                sitekey={process.env.GATSBY_HCAPTCHA_SITE_KEY}
                 onVerify={setToken}
                 onError={onError}
                 onExpire={onExpire}
