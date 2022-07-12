@@ -32,11 +32,15 @@ export default function Form() {
             console.log(`User Email: ${email}`);
             console.log(`hCaptcha Token: ${token}`);
 
-            axios.post('https://hcaptcha.com/siteverify', {
-                secret: process.env.GATSBY_HCAPTCHA_SECRET_KEY,
-                response: token
-            })
-                .then(function (response) {
+            axios({
+                method: 'post',
+                url: 'https://hcaptcha.com/siteverify',
+                headers: {'X-Requested-With': 'XMLHttpRequest'},
+                data: {
+                    secret: process.env.GATSBY_HCAPTCHA_SECRET_KEY,
+                    response: token,
+                }
+            }).then(function (response) {
                     console.log(response);
                 })
                 .catch(function (error) {
