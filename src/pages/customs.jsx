@@ -1,8 +1,11 @@
-import * as React from "react"
+import React from "react"
 import {Layout} from "../components/layout"
 import Autocomplete from "react-google-autocomplete"
 import * as styles from "./customs.module.css"
 import {Seo} from "../components/seo"
+
+
+
 
 function Hero() {
     return (
@@ -14,19 +17,9 @@ function Hero() {
     )
 }
 
+
 export default function CustomPage({data}) {
 
-
-    // Check if window is defined (so if in the browser or in node.js).
-    // const isBrowser = typeof window !== "undefined"
-    // if(isBrowser){
-    //     window.grecaptcha.ready(function() {
-    //         window.grecaptcha.execute(process.env.GATSBY_RECAPTCHA_SITE_KEY, {action: 'homepage'})
-    //             .then(function(token) {
-    //                 document.getElementById('captchaResponse').value = token;
-    //             });
-    //     });
-    // }
     return(
         <Layout>
             <Seo title="Custom Built Auto-Watering Gardens by Good2Grow" />
@@ -56,6 +49,7 @@ export default function CustomPage({data}) {
                 <label for={"property_address"}>
                     Property Address<br />
                     <Autocomplete
+                        aria-required={true}
                         name={"property_address"}
                         apiKey={process.env.GATSBY_PLACES_API}
                         onPlaceSelected={(place) => {
@@ -73,7 +67,7 @@ export default function CustomPage({data}) {
                     Message<br />
                     <textarea name="message" id="message" rows="5" />
                 </label>
-                    <input type="hidden" id="captchaResponse" name="g-recaptcha-response" />
+
                 <button type="submit" className={styles.submitButton}>Send</button>
             </form>
             </div>

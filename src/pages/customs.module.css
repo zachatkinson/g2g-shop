@@ -12,7 +12,12 @@
     padding-bottom: 1rem;
     font-weight: 700;
 }
-
+.captchaWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--size-gutter-raw);
+}
 .Hero {
     background-image: url("/customs-bg.jpg");
     background-repeat: no-repeat;

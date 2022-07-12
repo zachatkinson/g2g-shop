@@ -13,7 +13,7 @@ export function Footer() {
         Copyright &copy; {new Date().getFullYear()} · All rights reserved.
         </div>
         <div className={styles.recap}>
-          This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target={"_blank"} rel="noreferrer">Privacy Policy</a> and <a href="https://policies.google.com/terms" target={"_blank"} rel="noreferrer">Terms of Service</a> apply.
+          This site is protected by hCaptcha and its <a href="https://www.hcaptcha.com/privacy" target={"_blank"} rel={"noreferrer"}>Privacy Policy</a> and <a href="https://www.hcaptcha.com/terms" target={"_blank"} rel={"noreferrer"}>Terms of Service</a> apply.
         </div>
       </div>
     </footer>

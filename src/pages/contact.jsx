@@ -1,7 +1,8 @@
-import React, { useState }  from "react"
+import React from "react"
 import {Layout} from "../components/layout"
 import * as styles from "./contact.module.css"
 import {Seo} from "../components/seo"
+import Form from "../components/contact-form";
 
 
 function Hero() {
@@ -15,18 +16,6 @@ function Hero() {
 }
 
 export default function ContactPage() {
-
-    // Check if window is defined (so if in the browser or in node.js).
-    // const isBrowser = typeof window !== "undefined"
-    // if(isBrowser){
-    //     window.grecaptcha.ready(function() {
-    //         window.grecaptcha.execute(process.env.GATSBY_RECAPTCHA_SITE_KEY, {action: 'homepage'})
-    //             .then(function(token) {
-    //                 document.getElementById('captchaResponse').value = token;
-    //             });
-    //     });
-    // }
-
 
     return (
         <Layout>
@@ -51,35 +40,9 @@ export default function ContactPage() {
                         </div>
 
                     </div>
-                    <div className={styles.contactForm}>
-                        <form method="post" action="https://getform.io/f/61ea152c-7c37-487e-bca7-c848aeaa2166">
-                            <label>
-                                Name<br/>
-                                <input type="text" name="name" id="name" required/>
-                            </label>
-                            <label>
-                                Email<br/>
-                                <input type="email" name="email" id="email" required/>
-                            </label>
-                            <label>
-                                Inquiry Type<br/>
-                                <select name={"subject"} required defaultValue={"feedback"}>
-                                    <option value={"shipping"}>Shipping</option>
-                                    <option value={"billing"}>Commercial / Office Space</option>
-                                    <option value={"product question"}>Product Question</option>
-                                    <option value={"feedback"}>Feedback</option>
-                                    <option value={"orders-cancellations"}>Orders / Cancellations</option>
-                                    <option value={"other"}>Other</option>
-                                </select>
-                            </label>
-                            <label>
-                                Message<br/>
-                                <textarea name="message" id="message" rows="5"/>
-                            </label>
-                            <input type="hidden" id="captchaResponse" name="g-recaptcha-response" />
-                            <button type="submit" className={styles.submitButton}>Send</button>
-                        </form>
-                    </div>
+
+                        <Form />
+
                 </div>
             </div>
 
