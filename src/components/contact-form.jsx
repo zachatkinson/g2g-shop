@@ -1,48 +1,41 @@
 import React, { useEffect, useRef, useState } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import * as styles from "./contact-form.module.css"
-import { verifyHcaptchaToken } from 'verify-hcaptcha';
+import axios from "axios"
 
 export default function Form() {
+
     const [token, setToken] = useState(null);
+    const [error, setError] = useState("")
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [message, setMessage] = useState("")
     const captchaRef = useRef(null);
-
-    const onSubmit = () => {
-        // this reaches out to the hcaptcha library and runs the
-        // execute function on it. you can use other functions as well
-        // documented in the api:
-        // https://docs.hcaptcha.com/configuration#jsapi
-        captchaRef.current.execute();
-    };
-
-    const onExpire = () => {
-        console.log("hCaptcha Token Expired");
-    };
-
-    const onError = (err) => {
-        console.log(`hCaptcha Error: ${err}`);
-    };
-
-    useEffect(() => {
-        if (token) {
-            // Token is set, can submit here
-            console.log(`User Email: ${email}`);
-            console.log(`hCaptcha Token: ${token}`);
-            const result = verifyHcaptchaToken({
-                token: token,
-                secretKey: process.env.GATSBY_HCAPTCHA_SECRET_KEY,
-                siteKey: process.env.GATSBY_HCAPTCHA_SITE_KEY,
+    function handleSubmit(evt) {
+        evt.preventDefault()
+        console.log("I'm preventing default ")
+        axios.post('https://hcaptcha.com/siteverify',{
+            "secret": process.env.GATSBY_HCAPTCHA_SECRET_KEY,
+            "response": token,
+            "siteKey": process.env.GATSBY_HCAPTCHA_SITE_KEY
+        }).then(function (response) {
+            console.log(response);
+        })
+            .catch(function (error) {
+                console.log(error);
             });
-            console.log(result)
+    }
+    function onError(){
 
-        }
-    }, [token, email]);
+    }
+
+    function onExpire(){
+
+    }
+
 
     return (
-        <form>
+        <form onSubmit={(evt) => handleSubmit(evt)}>
             <label>
                 Name<br/>
                 <input type="text" name="name" id="name" value={name} onChange={(evt) => setName(evt.target.value)} required/>
@@ -68,18 +61,17 @@ export default function Form() {
             </label>
             <div className={styles.captchaWrap}>
             <HCaptcha
-                // This is testing sitekey, will autopass
-                // Make sure to replace
                 sitekey={process.env.GATSBY_HCAPTCHA_SITE_KEY}
-                onVerify={setToken}
+                onVerify={token => setToken(token)}
                 onError={onError}
                 onExpire={onExpire}
                 ref={captchaRef}
                 className={"hcaptcha"}
             />
             </div>
+            {error && <p>{error}</p>}
             {token && <div>Success! Token: {token}</div>}
-            <button className={styles.submitButton} onClick={onSubmit}>Submit</button>
+            <button className={styles.submitButton} type={"submit"}>Submit</button>
         </form>
     );
 }

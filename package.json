@@ -46,6 +46,7 @@
     "gatsby-transformer-remark": "^5.16.0",
     "gatsby-transformer-sharp": "^4.0.0",
     "gbimage-bridge": "^0.2.1",
+    "hcaptcha": "^0.1.1",
     "isomorphic-fetch": "^3.0.0",
     "lodash.debounce": "^4.0.8",
     "lodash.isequal": "^4.5.0",
@@ -58,7 +59,6 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
     "shopify-buy": "^2.11.0",
-    "urql": "^2.0.2",
-    "verify-hcaptcha": "^1.0.0"
+    "urql": "^2.0.2"
   }
 }
