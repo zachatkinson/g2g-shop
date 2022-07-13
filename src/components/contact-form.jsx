@@ -40,7 +40,7 @@ export default function Form() {
                     secret: process.env.GATSBY_HCAPTCHA_SECRET_KEY,
                     response: {token},
                 },
-                headers: {'Access-Control-Allow-Origin': 'https://hcaptcha.com/siteverify'},
+                headers: {'Access-Control-Allow-Origin': '*'},
             }).then(function (response) {
                     console.log(response);
                 })
