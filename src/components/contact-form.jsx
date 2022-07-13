@@ -15,7 +15,7 @@ export default function Form() {
         // execute function on it. you can use other functions as well
         // documented in the api:
         // https://docs.hcaptcha.com/configuration#jsapi
-        hcaptcha.execute();
+        captchaRef.current.execute();
     };
 
     const onExpire = () => {
@@ -32,21 +32,16 @@ export default function Form() {
             console.log(`User Email: ${email}`);
             console.log(`hCaptcha Token: ${token}`);
 
-            axios({
-                method: 'post',
-                url: 'https://hcaptcha.com/siteverify',
-
-                data: {
-                    secret: process.env.GATSBY_HCAPTCHA_SECRET_KEY,
-                    response: {token},
-                },
-                headers: {'Access-Control-Allow-Origin': '*'},
+            axios.post('https://hcaptcha.com/siteverify', {
+                'response': token,
+                'secret': process.env.GATSBY_HCAPTCHA_SECRET_KEY
             }).then(function (response) {
-                    console.log(response);
-                })
+                console.log(response);
+            })
                 .catch(function (error) {
                     console.log(error);
                 });
+
         }
     }, [token, email]);
 
