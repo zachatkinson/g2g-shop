@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import * as styles from "./contact-form.module.css"
-import axios from "axios";
+import { verifyHcaptchaToken } from 'verify-hcaptcha';
 
 export default function Form() {
     const [token, setToken] = useState(null);
@@ -31,16 +31,12 @@ export default function Form() {
             // Token is set, can submit here
             console.log(`User Email: ${email}`);
             console.log(`hCaptcha Token: ${token}`);
-
-            axios.post('https://hcaptcha.com/siteverify', {
-                'response': token,
-                'secret': process.env.GATSBY_HCAPTCHA_SECRET_KEY
-            }).then(function (response) {
-                console.log(response);
-            })
-                .catch(function (error) {
-                    console.log(error);
-                });
+            const result = verifyHcaptchaToken({
+                token: token,
+                secretKey: process.env.GATSBY_HCAPTCHA_SECRET_KEY,
+                siteKey: process.env.GATSBY_HCAPTCHA_SITE_KEY,
+            });
+            console.log(result)
 
         }
     }, [token, email]);
